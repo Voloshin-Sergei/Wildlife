@@ -19,89 +19,145 @@ body {
 .container {
   max-width: 1440px;
   margin: 0 auto;
-  background-color: black;
 }
 
-.header__content {
+.content {
   max-width: 1200px;
-  display: flex;
-  justify-content: space-between;
   margin: 0 auto;
-  padding-top: 19px;
 }
 
-.header__logo {
-  display: flex;
+.header {
+  position: absolute;
+  height: 100px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 19px;
+  }
+
+  &__logo {
+    display: flex;
+  }
 }
 
-.logo__icon {
-  width: 70px;
-  height: 60px;
-  margin-right: 15px;
+.logo {
+  &__icon {
+    width: 70px;
+    height: 60px;
+    margin-right: 15px;
+  }
+
+  &__title {
+    font-family: $font-roboto;
+    color: $font-light;
+    font-size: 32px;
+    line-height: 60px;
+    text-transform: uppercase;
+  }
 }
 
-.logo__title {
-  font-family: $font-roboto;
-  color: $font-light;
-  font-size: 32px;
-  line-height: 60px;
-  text-transform: uppercase;
+.navigation {
+  &__list {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+  }
+  &__list :not(:last-child) {
+    margin-right: 61px;
+  }
+  &__link {
+    font-size: 23px;
+    line-height: 60px;
+    color: $font-light;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+  &__link:hover {
+    color: $orange-light;
+  }
+  &__link:active {
+    color: $orange-dark;
+  }
+  &__search-icon {
+    fill: $font-light;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+  }
+  &__sing-in {
+    font-size: 23px;
+    color: $font-light;
+    background-color: transparent;
+    border: 2px $orange-main solid;
+    border-radius: 5px;
+    padding: 8px 23px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  &__sing-in:hover {
+    background-color: $orange-light;
+    border-color: $orange-light;
+  }
+
+  &__sing-in:active {
+    background-color: $orange-dark;
+    border-color: $orange-dark;
+  }
 }
 
-.navigation__list {
-  display: flex;
-  list-style-type: none;
-  align-items: center;
-}
+.survival {
+  background-color: #02160b;
 
-.navigation__item :not(last-child) {
-  margin-right: 61px;
-}
+  .container {
+    background-image: url('assets/survival-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+  }
 
-.navigation__link {
-  font-size: 23px;
-  line-height: 60px;
-  color: $font-light;
-  text-decoration: none;
-  transition: all 0.2s ease;
-}
+  &__content {
+    padding-top: 200px;
+  }
 
-.navigation__link:hover {
-  color: $orange-light;
-}
+  &__title {
+    font-size: 48px;
+    letter-spacing: 2px;
+    color: $orange-main;
+    margin-bottom: 51px;
+    font-weight: normal;
+  }
 
-.navigation__link:active {
-  color: $orange-dark;
-}
+  &__description {
+    font-size: 18px;
+    line-height: 27px;
+    color: $font-light;
+    max-width: 274px;
+    margin-bottom: 50px;
+  }
 
-.navigation__search-icon {
-  fill: $font-light;
-  width: 32px;
-  height: 32px;
-  cursor: pointer;
-}
+  &__button {
+    background-color: $orange-main;
+    color: $font-light;
+    font-family: $font-roboto;
+    font-size: 23px;
+    padding: 16px 42px;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
 
-.navigation__search-icon:hover {
-  fill: $orange-light;
-}
+  &__button:hover {
+    background-color: $orange-light;
+  }
 
-.navigation__sing-in {
-  font-size: 23px;
-  color: $font-light;
-  background-color: transparent;
-  border: 2px $orange-main solid;
-  border-radius: 5px;
-  padding: 8px 23px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.navigation__sing-in:hover {
-  background-color: $orange-light;
-  border-color: $orange-light;
-}
-
-.navigation__sing-in:active {
-  background-color: $orange-dark;
-  border-color: $orange-dark;
+  &__button:active {
+    background-color: $orange-dark;
+  }
 }
