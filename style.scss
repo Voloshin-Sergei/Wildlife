@@ -176,12 +176,12 @@ body {
 .survival {
   background-color: #02160b;
 
-  .container {
+  &__container {
     background-image: url('assets/survival-bg.jpg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    height: 100vh;
+    min-height: 100vh;
   }
 
   &__content {
@@ -228,5 +228,145 @@ body {
     &:active {
       background-color: $orange-dark;
     }
+  }
+}
+
+.articles {
+  background-color: #cccccc;
+
+  &__content {
+    padding-top: 120px;
+    @media (max-width: 780px) {
+      padding-top: 20px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-size: 48px;
+    font-weight: normal;
+    text-align: center;
+    color: $font-dark;
+    @media (max-width: 780px) {
+      margin-bottom: 10px;
+    }
+    @media (max-width: 341px) {
+      font-size: 40px;
+    }
+  }
+
+  &__description {
+    margin-bottom: 120px;
+    font-size: 24px;
+    text-align: center;
+    color: $font-grey;
+    @media (max-width: 780px) {
+      margin-bottom: 20px;
+    }
+    @media (max-width: 341px) {
+      font-size: 20px;
+    }
+  }
+}
+
+.slider {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media (max-width: 745px) {
+    padding: 0 30px;
+  }
+  @media (max-width: 465px) {
+    position: relative;
+    justify-content: center;
+    padding: 0;
+  }
+
+  &__button {
+    width: 30px;
+    height: 70px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.5s ease;
+
+    &_prev {
+      background-image: url('assets/arrow_left.svg');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      @media (max-width: 465px) {
+        position: absolute;
+        bottom: 15px;
+        right: 60%;
+      }
+
+      &:hover {
+        transform: translateX(-10px);
+      }
+    }
+
+    &_next {
+      background-image: url('assets/arrow_right.svg');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      @media (max-width: 465px) {
+        position: absolute;
+        bottom: 15px;
+        left: 60%;
+      }
+
+      &:hover {
+        transform: translateX(10px);
+      }
+    }
+  }
+
+  &__item {
+    position: relative;
+    width: 300px;
+    height: 360px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    @media (max-width: 1050px) {
+      &:nth-child(4) {
+        display: none;
+      }
+    }
+    @media (max-width: 745px) {
+      &:nth-child(3) {
+        display: none;
+      }
+    }
+    @media (max-width: 465px) {
+      margin-bottom: 80px;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__item__title {
+    position: absolute;
+    bottom: 77px;
+    left: 0;
+    width: 100%;
+    font-size: 22px;
+    font-weight: normal;
+    text-align: center;
+    color: $font-light;
+  }
+
+  &__item__description {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    width: 100%;
+    font-weight: normal;
+    font-size: 17px;
+    text-align: center;
+    color: $font-light;
   }
 }
