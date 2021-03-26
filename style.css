@@ -28,6 +28,25 @@ body {
   margin: 0 auto;
 }
 
+.button {
+  padding: 16px 42px;
+  font-size: 23px;
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  background-color: #cd6326;
+  color: #f7f7f7;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: #e39128;
+}
+.button:active {
+  background-color: #8f5613;
+}
+
 .header {
   position: absolute;
   top: 0;
@@ -211,33 +230,18 @@ body {
     max-width: none;
   }
 }
-.survival__button {
-  padding: 16px 42px;
-  font-size: 23px;
-  font-family: "Roboto", sans-serif;
-  background-color: #cd6326;
-  color: #f7f7f7;
-  border: none;
-  border-radius: 5px;
-  transition: all 0.2s ease;
-  cursor: pointer;
-}
-.survival__button:hover {
-  background-color: #e39128;
-}
-.survival__button:active {
-  background-color: #8f5613;
-}
 
 .articles {
   background-color: #cccccc;
 }
 .articles__content {
   padding-top: 120px;
+  padding-bottom: 120px;
 }
 @media (max-width: 780px) {
   .articles__content {
     padding-top: 20px;
+    padding-bottom: 20px;
   }
 }
 .articles__title {
@@ -375,4 +379,72 @@ body {
   font-size: 17px;
   text-align: center;
   color: #f7f7f7;
+}
+
+.notification {
+  background-color: #cccccc;
+}
+.notification .notification__content {
+  padding-top: 118px;
+  padding-bottom: 239px;
+}
+@media (max-width: 730px) {
+  .notification .notification__content {
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+}
+.notification__title {
+  margin-bottom: 60px;
+  font-weight: normal;
+  font-size: 27px;
+  text-align: center;
+  color: #333333;
+}
+@media (max-width: 730px) {
+  .notification__title {
+    margin-bottom: 20px;
+  }
+}
+.notification .form {
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 465px) {
+  .notification .form {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.notification .form__input {
+  width: 450px;
+  height: 60px;
+  padding-left: 15px;
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  font-size: 23px;
+  border: 1px solid #666666;
+  border-right: none;
+  background-color: #cccccc;
+}
+@media (max-width: 465px) {
+  .notification .form__input {
+    width: 300px;
+    margin-bottom: 10px;
+    border-right: 1px solid #666666;
+  }
+}
+.notification .form__input:focus {
+  outline-color: #8f5613;
+}
+.notification .form__submit {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+@media (max-width: 465px) {
+  .notification .form__submit {
+    width: 300px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+  }
 }
