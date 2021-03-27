@@ -53,12 +53,17 @@ body {
   left: 0;
   right: 0;
 }
+@media (max-width: 770px) {
+  .header .logo {
+    display: none;
+  }
+}
 .header__content {
   display: flex;
   justify-content: space-between;
   padding-top: 19px;
 }
-@media (max-width: 750px) {
+@media (max-width: 770px) {
   .header__content {
     justify-content: center;
   }
@@ -68,15 +73,10 @@ body {
     padding-top: 0;
   }
 }
-.header__logo {
+
+.logo {
   display: flex;
 }
-@media (max-width: 750px) {
-  .header__logo {
-    display: none;
-  }
-}
-
 .logo__icon {
   width: 70px;
   height: 60px;
@@ -117,7 +117,7 @@ body {
 .navigation__list :not(:last-child) {
   margin-right: 61px;
 }
-@media (max-width: 520px) {
+@media (max-width: 532px) {
   .navigation__list :not(:last-child) {
     margin-right: 30px;
   }
@@ -447,4 +447,74 @@ body {
     border-bottom-left-radius: 5px;
     border-top-left-radius: 5px;
   }
+}
+
+.footer {
+  background-color: #02160b;
+}
+.footer__container {
+  min-height: 359px;
+  display: flex;
+  background-image: url("assets/footer-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.footer__content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 1040px) {
+  .footer__content {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
+@media (max-width: 390px) {
+  .footer__navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.footer__navigation__link {
+  font-weight: normal;
+  font-size: 23px;
+  color: #f7f7f7;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.footer__navigation__link:not(:last-child) {
+  margin-right: 86px;
+}
+@media (max-width: 530px) {
+  .footer__navigation__link:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+@media (max-width: 390px) {
+  .footer__navigation__link:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+.footer__navigation__link:hover {
+  color: #e39128;
+}
+.footer__navigation__link:active {
+  color: #8f5613;
+}
+
+.social__link:not(:last-child) {
+  margin-right: 27px;
+}
+.social__item {
+  width: 40px;
+  height: 40px;
+  transition: all 0.5s ease;
+}
+.social__item:hover {
+  transform: scale(1.1);
 }
