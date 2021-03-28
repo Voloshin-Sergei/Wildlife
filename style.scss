@@ -149,6 +149,13 @@ body {
     width: 32px;
     height: 32px;
     cursor: pointer;
+    &:hover {
+      fill: $orange-light;
+    }
+
+    &:active {
+      fill: $orange-dark;
+    }
   }
   &__sing-in {
     font-size: 23px;

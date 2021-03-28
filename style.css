@@ -150,6 +150,12 @@ body {
   height: 32px;
   cursor: pointer;
 }
+.navigation__search-icon:hover {
+  fill: #e39128;
+}
+.navigation__search-icon:active {
+  fill: #8f5613;
+}
 .navigation__sing-in {
   font-size: 23px;
   font-family: "Roboto", sans-serif;
